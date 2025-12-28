@@ -2,8 +2,16 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Rocket } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useCursor } from '../contexts/CursorContext';
+
+// Custom Nexalis Logo Component
+const NexalisLogo = () => (
+  <svg width="28" height="28" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 63.5 136.5 V 63.5 L 96.82369979491291 85.34015289959805" stroke="#6366f1" strokeWidth="47" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M 136.5 63.5 V 136.5 L 103.17630020508709 114.65984710040195" stroke="#818cf8" strokeWidth="47" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,7 +55,7 @@ const Navbar: React.FC = () => {
           onMouseEnter={() => setCursorType('button')}
           onMouseLeave={() => setCursorType('default')}
         >
-          <Rocket className="text-lumina-accent" />
+          <NexalisLogo />
           <span>Nexalis</span>
         </a>
 
