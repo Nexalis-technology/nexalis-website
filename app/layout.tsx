@@ -20,10 +20,10 @@ export const metadata: Metadata = {
   description: "Nexalis builds the future of digital experience through high-end web development, AI agent integration, and strategic technical consultation.",
   keywords: "Nexalis, digital agency, AI engineering, web development, React, Next.js, AI agents, mobile apps, software architecture",
   authors: [{ name: "Nexalis Team" }],
-  metadataBase: new URL('https://www.nexalis.in'),
+  metadataBase: new URL('https://nexalis.in'),
   openGraph: {
     type: "website",
-    url: "https://www.nexalis.in/",
+    url: "https://nexalis.in/",
     title: "Nexalis | Intelligent Digital Solutions",
     description: "Forging the Digital Intelligence. We architect high-performance systems and deploy intelligent AI agents.",
     siteName: "Nexalis",
