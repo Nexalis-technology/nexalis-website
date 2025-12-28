@@ -1,0 +1,40 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#030712"/>
+  
+  <!-- Gradient Orbs -->
+  <circle cx="200" cy="150" r="300" fill="#6366f1" opacity="0.1" filter="blur(80px)"/>
+  <circle cx="1000" cy="480" r="250" fill="#818cf8" opacity="0.1" filter="blur(80px)"/>
+  
+  <!-- Grid Pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  
+  <!-- Logo - Properly centered (logo viewBox is 200x200, so center is at 100,100) -->
+  <g transform="translate(500, 100) scale(0.8)">
+    <path d="M 63.5 136.5 V 63.5 L 96.82369979491291 85.34015289959805" stroke="#6366f1" stroke-width="47" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 136.5 63.5 V 136.5 L 103.17630020508709 114.65984710040195" stroke="#818cf8" stroke-width="47" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Text - More spacing from logo -->
+  <text x="600" y="310" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Nexalis
+  </text>
+  
+  <text x="600" y="380" font-family="Arial, sans-serif" font-size="32" fill="#9ca3af" text-anchor="middle">
+    Intelligent Digital Solutions &amp; AI Engineering
+  </text>
+  
+  <!-- Accent Line - Wider to cover full tagline -->
+  <rect x="250" y="410" width="700" height="4" fill="url(#gradient)" rx="2"/>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#818cf8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

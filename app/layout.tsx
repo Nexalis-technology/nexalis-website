@@ -20,17 +20,19 @@ export const metadata: Metadata = {
   description: "Nexalis builds the future of digital experience through high-end web development, AI agent integration, and strategic technical consultation.",
   keywords: "Nexalis, digital agency, AI engineering, web development, React, Next.js, AI agents, mobile apps, software architecture",
   authors: [{ name: "Nexalis Team" }],
+  metadataBase: new URL('https://www.nexalis.in'),
   openGraph: {
     type: "website",
-    url: "https://nexalis.io/",
+    url: "https://www.nexalis.in/",
     title: "Nexalis | Intelligent Digital Solutions",
     description: "Forging the Digital Intelligence. We architect high-performance systems and deploy intelligent AI agents.",
+    siteName: "Nexalis",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&h=630&auto=format&fit=crop",
+        url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "Nexalis Digital Solutions",
+        alt: "Nexalis - Intelligent Digital Solutions & AI Engineering",
       },
     ],
   },
@@ -38,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nexalis | Intelligent Digital Solutions",
     description: "Forging the Digital Intelligence. We architect high-performance systems and deploy intelligent AI agents.",
-    images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&h=630&auto=format&fit=crop"],
+    images: ["/og-image.svg"],
   },
 };
 
