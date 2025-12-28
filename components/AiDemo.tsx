@@ -7,7 +7,6 @@ import { Sparkles, Send, Bot, User, Loader2, MessageCircle } from 'lucide-react'
 import { useCursor } from '../contexts/CursorContext';
 import { ChatMessage } from '../types';
 
-
 const AiDemo: React.FC = () => {
   const { setCursorType } = useCursor();
   const [input, setInput] = useState('');
