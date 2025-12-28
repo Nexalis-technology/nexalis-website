@@ -27,20 +27,11 @@ export const metadata: Metadata = {
     title: "Nexalis | Intelligent Digital Solutions",
     description: "Forging the Digital Intelligence. We architect high-performance systems and deploy intelligent AI agents.",
     siteName: "Nexalis",
-    images: [
-      {
-        url: "/og-image.svg",
-        width: 1200,
-        height: 630,
-        alt: "Nexalis - Intelligent Digital Solutions & AI Engineering",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Nexalis | Intelligent Digital Solutions",
     description: "Forging the Digital Intelligence. We architect high-performance systems and deploy intelligent AI agents.",
-    images: ["/og-image.svg"],
   },
 };
 
