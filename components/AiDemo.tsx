@@ -15,10 +15,11 @@ const AiDemo: React.FC = () => {
     { role: 'model', text: "Welcome to Nexalis. I am your specialized digital agent. How can I assist you with your next high-performance project?" }
   ]);
   const [isLoading, setIsLoading] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (!messagesContainerRef.current) return;
+    messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
   };
 
   useEffect(() => {
@@ -119,7 +120,11 @@ const AiDemo: React.FC = () => {
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
             </div>
 
-            <div className="flex-1 overflow-y-auto p-6 space-y-4 custom-scrollbar">
+            <div
+              ref={messagesContainerRef}
+              className="flex-1 overflow-y-auto p-6 space-y-4 custom-scrollbar overscroll-contain"
+              style={{ overflowAnchor: 'none' }}
+            >
                 {messages.map((msg, idx) => (
                     <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                         <div className={`flex items-start max-w-[85%] ${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
@@ -148,7 +153,6 @@ const AiDemo: React.FC = () => {
                         </div>
                     </div>
                 )}
-                <div ref={messagesEndRef} />
             </div>
 
             <div className="p-4 bg-[#1a2236]/50 border-t border-gray-800">
