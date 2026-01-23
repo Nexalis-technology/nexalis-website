@@ -4,7 +4,7 @@ import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import { ArrowRight, Code2, BrainCircuit } from 'lucide-react';
 import { useCursor } from '../contexts/CursorContext';
-import ShaderAnimation from './ui/ShaderAnimation';
+import ShaderBackground from './ui/ShaderBackground';
 
 const Hero: React.FC = () => {
   const { setCursorType } = useCursor();
@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <ShaderAnimation className="absolute inset-0" />
+        <ShaderBackground className="absolute inset-0 h-full w-full blur-[6px]" />
         <div className="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-lumina-accent/10 rounded-full blur-[120px] animate-pulse"></div>
         <div className="absolute bottom-[20%] right-[10%] w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
