@@ -38,7 +38,7 @@ const ShaderAnimation: React.FC<ShaderAnimationProps> = ({ className }) => {
 
       void main(void) {
         vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
-        float t = time*0.05;
+        float t = time*0.09;
         float lineWidth = 0.002;
 
         vec3 color = vec3(0.0);
@@ -48,6 +48,7 @@ const ShaderAnimation: React.FC<ShaderAnimationProps> = ({ className }) => {
           }
         }
 
+        color *= 0.5;
         gl_FragColor = vec4(color[0],color[1],color[2],1.0);
       }
     `;
