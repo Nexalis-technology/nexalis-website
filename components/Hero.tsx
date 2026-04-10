@@ -83,14 +83,14 @@ const Hero: React.FC = () => {
               Get Started
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button 
+            {/* <button 
               className="px-8 py-4 bg-black/30 backdrop-blur-md border border-gray-600 hover:border-white text-white rounded-full font-bold transition-all hover:bg-white/5 hover:-translate-y-1"
               onMouseEnter={() => setCursorType('button')}
               onMouseLeave={() => setCursorType('default')}
               onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Our Case Studies
-            </button>
+            </button> */}
           </motion.div>
         </motion.div>
       </div>
