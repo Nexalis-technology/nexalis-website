@@ -2,7 +2,7 @@
 
 A high-performance digital agency website built with Next.js 15, TypeScript, and Tailwind CSS.
 
-## 🚀 Features
+## 🚀  Features
 
 - **Next.js 15** with App Router for optimal SEO and performance
 - **TypeScript** for type safety
