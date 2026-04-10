@@ -39,18 +39,20 @@ const InteractiveGlobe = () => {
       if (!scene.userData.hasExtraLight) {
         // import three dynamically to avoid SSR issues
         import('three').then((THREE) => {
-          // Massively boosted lighting 
-          const ambientLight = new THREE.AmbientLight(0xffffff, 5.0); // Doubled ambient brightness
-          const directionalLight = new THREE.DirectionalLight(0xa855f7, 10.0); // Huge purple directional light
-          directionalLight.position.set(1, 1, 2); // Angled directly at the front
+          // Spread light entirely across the globe evenly
+          const ambientLight = new THREE.AmbientLight(0xffffff, 12.0); // Extremely bright ambient to light all sides evenly without shadows
           
-          // Pure white spotlight hitting the globe dead center for maximum brightness
-          const spotLight = new THREE.SpotLight(0xffffff, 15.0);
-          spotLight.position.set(0, 0, 50);
+          // Add directional lights from opposite angles to ensure absolutely no dark spots while maintaining 3D shape
+          const rightLight = new THREE.DirectionalLight(0xffffff, 6.0);
+          rightLight.position.set(1, 1, 1);
+          
+          const leftLight = new THREE.DirectionalLight(0xa855f7, 6.0); // Subtle purple tint from the other side
+          leftLight.position.set(-1, -1, 1); 
 
           scene.add(ambientLight);
-          scene.add(directionalLight);
-          scene.add(spotLight);
+          scene.add(rightLight);
+          scene.add(leftLight);
+
           scene.userData.hasExtraLight = true;
         });
       }
