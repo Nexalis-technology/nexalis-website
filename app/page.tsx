@@ -6,7 +6,7 @@ import Services from '../components/Services';
 import EndToEndSolutions from '../components/EndToEndSolutions';
 // import Portfolio from '../components/Portfolio';
 import AiDemo from '../components/AiDemo';
-import Testimonials from '../components/Testimonials';
+// import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
@@ -23,7 +23,7 @@ export default function Home() {
         <EndToEndSolutions />
         {/* <Portfolio /> */}
         <AiDemo />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Contact />
       </main>
       <ScrollToTop />

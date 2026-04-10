@@ -2,7 +2,9 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, Mail, MapPin, X } from 'lucide-react';
+import { Calendar, Mail,
+  //  MapPin,
+    X } from 'lucide-react';
 import { useCursor } from '../contexts/CursorContext';
 
 const Contact: React.FC = () => {
@@ -31,11 +33,11 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-bold text-lg">Email Us</h3>
-                  <p className="text-gray-400">hello@nexalis.digital</p>
+                  <p className="text-gray-400">contact@nexalis.in</p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
+              {/* <div className="flex items-start space-x-4">
                 <div className="bg-gray-800 p-3 rounded-lg text-lumina-accent">
                   <MapPin size={24} />
                 </div>
@@ -43,7 +45,7 @@ const Contact: React.FC = () => {
                   <h3 className="text-white font-bold text-lg">Headquarters</h3>
                   <p className="text-gray-400">123 Tech District, San Francisco, CA</p>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <motion.button
