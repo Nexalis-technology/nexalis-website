@@ -55,14 +55,14 @@ const Card02 = () => (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
       <div className="flex flex-col gap-3">
         {[
-          { icon: <Cpu />, title: 'Custom LLMs', sub: 'Models trained on your domain & business data' },
-          { icon: <Bot />, title: 'AI Chatbots & Agents', sub: 'Intelligent assistants handling real queries' },
-          { icon: <MessageSquare />, title: 'WhatsApp AI', sub: 'Automate replies, lead capture & support' },
-          { icon: <Phone />, title: 'AI Voice & Call Systems', sub: 'Conversational voice AI for sales' }
+          { icon: <Cpu className="w-5 h-5" />, title: 'Custom LLMs', sub: 'Models trained on your domain & business data' },
+          { icon: <Bot className="w-5 h-5" />, title: 'AI Chatbots & Agents', sub: 'Intelligent assistants handling real queries' },
+          { icon: <MessageSquare className="w-5 h-5" />, title: 'WhatsApp AI', sub: 'Automate replies, lead capture & support' },
+          { icon: <Phone className="w-5 h-5" />, title: 'AI Voice & Call Systems', sub: 'Conversational voice AI for sales' }
         ].map((pill, i) => (
           <div key={i} className="bg-[#111830] border border-[#1e2850] rounded-xl p-3 flex items-center gap-3 hover:border-lumina-accent transition-colors">
             <div className="w-10 h-10 rounded-lg bg-lumina-accent/10 border border-lumina-accent/20 flex items-center justify-center text-lumina-accent flex-shrink-0">
-              {React.cloneElement(pill.icon as React.ReactElement, { className: "w-5 h-5" })}
+              {pill.icon}
             </div>
             <div>
               <div className="text-[13px] font-bold text-gray-200 mb-0.5">{pill.title}</div>
