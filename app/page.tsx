@@ -1,8 +1,10 @@
 import CustomCursor from '../components/CustomCursor';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import WhyChooseUs from '../components/WhyChooseUs';
 import Services from '../components/Services';
-import Portfolio from '../components/Portfolio';
+import EndToEndSolutions from '../components/EndToEndSolutions';
+// import Portfolio from '../components/Portfolio';
 import AiDemo from '../components/AiDemo';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
@@ -16,8 +18,10 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <WhyChooseUs />
         <Services />
-        <Portfolio />
+        <EndToEndSolutions />
+        {/* <Portfolio /> */}
         <AiDemo />
         <Testimonials />
         <Contact />
