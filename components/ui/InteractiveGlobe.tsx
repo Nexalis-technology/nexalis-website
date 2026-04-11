@@ -38,7 +38,7 @@ const InteractiveGlobe = () => {
       if (globeRef.current && globeRef.current.controls()) {
         const controls = globeRef.current.controls();
         controls.autoRotate = true;
-        controls.autoRotateSpeed = 1.2;
+        controls.autoRotateSpeed = 1.8;
         controls.enableZoom = false;
         globeRef.current.pointOfView({ altitude: 2.2 });
         

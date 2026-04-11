@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-black">
       {/* Background Interactive Globe */}
       <div className="absolute inset-0 z-0">
-        <div className="w-full h-[60vh] absolute bottom-0 lg:bottom-auto lg:-right-[10%] lg:top-1/2 lg:-translate-y-1/2 lg:w-[65%] lg:h-[120vh]">
+        <div className="w-full h-[60vh] absolute bottom-0 lg:bottom-auto lg:-right-[10%] lg:top-[58%] lg:-translate-y-1/2 lg:w-[65%] lg:h-[120vh]">
           <InteractiveGlobe />
         </div>
       </div>
