@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Globe, Smartphone, Server, MessageSquare, LineChart } from 'lucide-react';
 import { useCursor } from '../contexts/CursorContext';
 import { Service } from '../types';
@@ -64,25 +63,15 @@ const Services: React.FC = () => {
   return (
     <section id="services" className="py-32 bg-lumina-dark relative">
       <div className="container mx-auto px-6">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-20 text-center"
-        >
+        <div className="mb-20 text-center">
           <h2 className="text-sm font-bold text-lumina-accent uppercase tracking-widest mb-3">Our Expertise</h2>
           <h3 className="text-4xl md:text-5xl font-display font-bold text-white">Engineering Excellence</h3>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <motion.div
+          {services.map((service) => (
+            <div
               key={service.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
               onMouseEnter={() => setCursorType('button')}
               onMouseLeave={() => setCursorType('default')}
               className="p-8 border border-gray-800 bg-gray-900/20 backdrop-blur-sm rounded-2xl hover:border-lumina-accent/50 hover:bg-gray-800/50 transition-all duration-300 group"
@@ -92,7 +81,7 @@ const Services: React.FC = () => {
               </div>
               <h4 className="text-xl font-bold text-white mb-4 font-display">{service.title}</h4>
               <p className="text-gray-400 leading-relaxed text-sm">{service.description}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

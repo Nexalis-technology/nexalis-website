@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { 
   BarChart3, Code2, Smartphone, Layers, Globe, Monitor, ShoppingCart, Cpu, Network, HardDrive, ArrowUpRight 
 } from 'lucide-react';
@@ -76,12 +75,7 @@ const EndToEndSolutions: React.FC = () => {
   return (
     <section id="solutions" className="py-32 bg-black relative">
       <div className="container mx-auto px-6">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8"
-        >
+        <div className="mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div className="max-w-2xl">
             <h2 className="text-sm font-bold text-lumina-accent uppercase tracking-widest mb-3">Capabilities</h2>
             <h3 className="text-4xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">
@@ -100,16 +94,12 @@ const EndToEndSolutions: React.FC = () => {
             <span className="font-medium text-sm tracking-wide uppercase">All Technologies</span>
             <ArrowUpRight className="w-4 h-4 text-lumina-accent group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </button>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-min">
           {solutions.map((item, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05, duration: 0.5 }}
               onMouseEnter={() => setCursorType('button')}
               onMouseLeave={() => setCursorType('default')}
               className={`group relative overflow-hidden bg-gray-900/30 border border-gray-800 hover:border-gray-600 rounded-3xl p-8 transition-all duration-500 hover:bg-gray-800/40 ${item.colSpan}`}
@@ -134,7 +124,7 @@ const EndToEndSolutions: React.FC = () => {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

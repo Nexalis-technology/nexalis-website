@@ -303,19 +303,21 @@ const WhyChooseUs: React.FC = () => {
 
   return (
     <section ref={sectionRef} id="why-choose-us" className="bg-lumina-dark relative h-[600vh]">
-      <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
-        <div className="container mx-auto px-6">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-10 md:mb-16"
-          >
-            <h2 className="text-sm font-bold text-lumina-accent uppercase tracking-widest mb-3">Our Value</h2>
-            <h3 className="text-4xl md:text-6xl font-display font-bold text-white">Why Nexalis?</h3>
-          </motion.div>
+      <div className="container mx-auto px-6 pt-14 sm:pt-16 lg:pt-24">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-10 md:mb-16"
+        >
+          <h2 className="text-sm font-bold text-lumina-accent uppercase tracking-widest mb-3">Our Value</h2>
+          <h3 className="text-4xl md:text-6xl font-display font-bold text-white">Why Nexalis?</h3>
+        </motion.div>
+      </div>
 
-          <div className="flex flex-col lg:flex-row gap-12 items-start">
+      <div className="sticky top-20">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col lg:flex-row gap-12 items-start pb-8 lg:pb-10">
             {/* Vertical Navigation */}
             <div className="w-full lg:w-1/3 relative hidden lg:block">
               <div className="absolute left-6 top-0 bottom-0 w-px bg-gray-800" />

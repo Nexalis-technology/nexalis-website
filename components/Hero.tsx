@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-black">
+    <section className="relative min-h-[100dvh] lg:min-h-screen flex items-start lg:items-center pt-28 lg:pt-20 overflow-hidden bg-black">
       {/* Background Interactive Globe */}
       <div className="absolute inset-0 z-0">
         <div className="w-full h-[60vh] absolute bottom-0 lg:bottom-auto lg:-right-[10%] lg:top-[58%] lg:-translate-y-1/2 lg:w-[65%] lg:h-[120vh]">
@@ -43,13 +43,13 @@ const Hero: React.FC = () => {
           variants={container}
           initial="hidden"
           animate="show"
-          className="max-w-3xl pointer-events-auto"
+          className="max-w-3xl pointer-events-auto flex flex-col min-h-[calc(100dvh-8rem)] lg:min-h-0 pb-5 lg:pb-0"
         >
-          <motion.div variants={item} className="flex justify-start mb-8 space-x-4">
-            <span className="flex items-center px-4 py-2 rounded-full border border-gray-700/50 bg-black/40 backdrop-blur-md text-xs font-bold text-gray-300 uppercase tracking-widest shadow-[0_0_15px_rgba(99,102,241,0.15)]">
+          <motion.div variants={item} className="flex flex-wrap justify-start mb-8 gap-3 sm:gap-4">
+            <span className="flex w-fit items-center px-4 py-2 rounded-full border border-gray-700/50 bg-black/40 backdrop-blur-md text-xs font-bold text-gray-300 uppercase tracking-widest shadow-[0_0_15px_rgba(99,102,241,0.15)]">
               <Code2 className="w-4 h-4 mr-2 text-lumina-accent" /> Digital Systems
             </span>
-            <span className="flex items-center px-4 py-2 rounded-full border border-gray-700/50 bg-black/40 backdrop-blur-md text-xs font-bold text-gray-300 uppercase tracking-widest shadow-[0_0_15px_rgba(99,102,241,0.15)]">
+            <span className="flex w-fit items-center px-4 py-2 rounded-full border border-gray-700/50 bg-black/40 backdrop-blur-md text-xs font-bold text-gray-300 uppercase tracking-widest shadow-[0_0_15px_rgba(99,102,241,0.15)]">
               <BrainCircuit className="w-4 h-4 mr-2 text-lumina-accent" /> AI Agents
             </span>
           </motion.div>
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
             Nexalis architects high-performance digital ecosystems and deploys autonomous AI agents that redefine industry standards.
           </motion.p>
 
-          <motion.div variants={item} className="flex flex-col sm:flex-row justify-start gap-5">
+          <motion.div variants={item} className="mt-auto pt-8 lg:mt-0 lg:pt-0 flex flex-col sm:flex-row justify-start gap-5">
             <button 
               className="px-8 py-4 bg-lumina-accent hover:bg-indigo-500 text-white rounded-full font-bold transition-all flex items-center justify-center gap-2 group shadow-[0_0_20px_rgba(99,102,241,0.4)] hover:shadow-[0_0_30px_rgba(99,102,241,0.6)] hover:-translate-y-1"
               onMouseEnter={() => setCursorType('button')}
@@ -94,16 +94,6 @@ const Hero: React.FC = () => {
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, y: [0, 10, 0] }}
-        transition={{ delay: 2, duration: 2, repeat: Infinity }}
-        className="absolute bottom-10 left-6 md:left-10"
-      >
-        <div className="w-[1px] h-16 bg-gradient-to-b from-lumina-accent via-gray-500 to-transparent"></div>
-      </motion.div>
     </section>
   );
 };

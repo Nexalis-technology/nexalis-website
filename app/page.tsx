@@ -2,7 +2,7 @@ import CustomCursor from '../components/CustomCursor';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import WhyChooseUs from '../components/WhyChooseUs';
-import Services from '../components/Services';
+// import Services from '../components/Services';
 import EndToEndSolutions from '../components/EndToEndSolutions';
 // import Portfolio from '../components/Portfolio';
 import AiDemo from '../components/AiDemo';
@@ -18,11 +18,11 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <AiDemo />
         <WhyChooseUs />
-        <Services />
+        {/* <Services /> */}
         <EndToEndSolutions />
         {/* <Portfolio /> */}
-        <AiDemo />
         {/* <Testimonials /> */}
         <Contact />
       </main>

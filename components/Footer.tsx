@@ -1,4 +1,5 @@
 import React from 'react';
+import { Linkedin } from 'lucide-react';
 
 // Custom Nexalis Logo Component
 const NexalisLogo = () => (
@@ -23,9 +24,17 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="flex space-x-8">
-            <a href="#" className="text-gray-500 hover:text-white transition-colors text-sm uppercase tracking-widest font-medium">Privacy</a>
-            <a href="#" className="text-gray-500 hover:text-white transition-colors text-sm uppercase tracking-widest font-medium">Terms</a>
-            <a href="#" className="text-gray-500 hover:text-white transition-colors text-sm uppercase tracking-widest font-medium">LinkedIn</a>
+            {/* <a href="#" className="text-gray-500 hover:text-white transition-colors text-sm uppercase tracking-widest font-medium">Privacy</a>
+            <a href="#" className="text-gray-500 hover:text-white transition-colors text-sm uppercase tracking-widest font-medium">Terms</a> */}
+            <a
+              href="https://www.linkedin.com/company/nexalis-technologies/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-gray-500 hover:text-white transition-colors text-sm uppercase tracking-widest font-medium"
+            >
+              <Linkedin size={16} />
+              LinkedIn
+            </a>
           </div>
         </div>
       </div>
@@ -34,4 +43,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-
